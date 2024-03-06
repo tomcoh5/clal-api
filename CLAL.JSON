@@ -1,0 +1,269 @@
+{
+  "ApplicationKey": "Agencies-DwEJBgQGAgMOAA4LBAECAQ", # DO NOT TOUCH KEEP THIS VALUE
+  "TraceKey": "", # Ignore this value just leave it empty it's for the insurance company
+  "UserID": "22595664", #USERID for dev it will remain the same
+  "Password": "18", # DO NOT TOUCH KEEP THIS VALUE
+  "OperatorId": "22595664", # It's the id of the agent , it will be the default but it can change in the future
+  "PolicyStartDate": "2024-03-06T01:00:00.001Z", #Date must be the current date , both dates should be with this format
+  "PolicyEndDate": "2025-02-28T01:00:00.001Z", # DATE ENDING it's -1 the current month end of month
+  "LicenseNumber": "11015901", # you should get this parameter from the frontend
+  "ConnectedBranch": "31", # if there weren't any lawsuit again'st in the insurance value should be 31 if there is lawsuit value should be 16
+  "AgentNumber": "62818", # it's the number of the agent, make it default but not a const
+  "CustomerId": "17639691", # It's an id number (9 chars only numbers)
+  "FirstName": "", #Not Mandatory but it's good practice
+  "LastName": "", #Not Mandatory but it's good practice
+  "CustomerBirthDate": "", # leave it empty
+  "CellNumber": "", #leave it empty
+  "Email": "", #leave it empty
+  "City": "בני ברק", #it can be empty
+  "Street": "נויפלד", #it can be empty
+  "HouseNumber": "8", #it can be empty
+  "ZipCode": "51242418", # it can be empty
+   # if the client want's comprehensive insurance or Third Party Insurance we will need to send this input
+
+  "NumeratorsKasko": [
+    {
+      "Id": "1896",
+      "Value": "1" # if it's comprehensive insurance the value should be 1 , if it's third party insurance, value is 2
+    },
+    {
+      "Id": "4",
+      "Value": "1" # leave the value as 1
+    },
+    {
+      "Id": "3715",
+      "Value": "624135" # it's the car code you need to get this from StagentDB.Models.Car CarInformation
+    },
+    {
+      "Id": "3716",
+      "Value": "2010" #Year when the car create was created
+    },
+    {
+      "Id": "3717",
+      "Value": "10012010" #Year when the car first drove
+    },
+    {
+      "Id": "64",
+      "Value": "1000" # who is allowed to drive ?  1000 - single driver,  1100 - a pair of drivers Each driver, including a young person - 100 Every driver over the age of 21 - 200 ,300 - every driver over the age of 24 ,400 - every driver over the age of 30 , 500 - every driver over the age of 35 , 600 - every driver over the age of 40 , 700 - every driver over the age of 50 4
+    },
+    {
+      "Id": "1893",   # No - then enter a value of 0 in numerators 1893, 1894 1895 Yes - enter an appropriate value according to the question detail for the numerator
+      "Value": "0"
+    },
+    {
+      "Id": "1894",
+      "Value": "0"
+    },
+    {
+      "Id": "1895",
+      "Value": "0"
+    },
+    {
+      "Id": "1858",
+      "Value": "01011990" # when everyone can drive put primary driver birth date , if there only 2 drivers, or a single driver
+        # the Id Should change to 105 , with the value of the primary driver birth date
+    },
+    {
+      "Id": "1861",
+      "Value": "08072016" # when everyone can drive put primary driver driving licnese date , if there only 2 drivers, or a single driver
+        # the Id Should change to 106 , with the value of the primary driving licnese date
+    },
+    {
+      "Id": "3722",
+      "Value": "10"
+    },
+    {
+      "Id": "3723",
+      "Value": "10"
+    },
+    {
+      "Id": "3724",
+      "Value": "10"
+    },
+    {
+      "Id": "3728",
+      "Value": "1"
+    },
+    {
+      "Id": "3725",
+      "Value": "99"
+    },
+    {
+      "Id": "3729",
+      "Value": "0"
+    },
+    {
+      "Id": "3726",
+      "Value": "2"
+    },
+    {
+      "Id": "3727",
+      "Value": "2"
+    },
+    {
+      "Id": "3685",
+      "Value": "0" #Cancellation of third party deductible  1 - No, 2 - yes
+    },
+    {
+      "Id": "2130",
+      "Value": "-10" #discount precentage should be with -${number of precentage} keep it default value of 10 only if ConnectedBranch is 16
+    },
+    {
+      "Id": "3682",
+      "Value": "0"
+    },
+    {
+      "Id": "105", # go to id 1858
+      "Value": "01011990"
+    },
+    {
+      "Id": "106", # go to id 1861
+      "Value": "08072016"
+    },
+    {
+      "Id": "162", #first driver name
+      "Value": "אאא אאא"
+    },
+    {
+      "Id": "104", # id number of d
+      "Value": "111111111"
+    },
+    {
+      "Id": "109", # birth date of another driver
+      "Value": "01011990"
+    },
+    {
+      "Id": "110", # license driver date of another driver
+      "Value": "08072016"
+    },
+    {
+      "Id": "107",  #name of second driver
+      "Value": "אאא אאא"
+    },
+    {
+      "Id": "108", # id of second driver
+      "Value": "111111111"
+    },
+    {
+      "Id": "3621",# new for old
+      "Value": "0" # 2 - yes 1 - no
+    },
+    {
+      "Id": "3763", # are you the first owner of this car # only if the 3621 is yes
+      "Value": "2" # 2 - yes 1 - no
+    },
+    {
+      "Id": "3764", #Is the car a personal import? # only if the 3621 is yes
+      "Value": "2" # 2 - yes 1 - no
+    },
+    {
+      "Id": "3765", # is the car has got damage more than 50% # only if the 3621 is yes
+      "Value": "2"  # 2 - yes 1 - no
+    },
+    {
+      "Id": "3766", # is the car second hand with 0km  # only if the 3621 is yes
+      "Value": "2" # 2 - yes 1 - no
+    },
+    {
+      "Id": "3204", #check car insurance
+      "Value": "10" # 10 if the car has you as a owner more 23 months , 20 if not
+    },
+    {
+      "Id": "3684", # Mandatory discount
+      "Value": "1" # 2 - yes 1 - no
+    },
+    {
+      "Id": "185", #Repair at a preferred garage
+      "Value": "0" # 10 - Repair at a preferred garage , 0 - choose now 
+    },
+    {
+      "Id": "3683", # deductible
+      "Value": "10" # Deductible 1-1000 3683 10 - 1925 (rate) - private
+#20 - 2695 - Private
+#30 - 3850 - Private
+#40 - 1430 - Private
+#50 - 1155 - Private
+#100 - 2365 (rate) commercial
+#200 - 3300 - commercial
+#300 - 4730 - commercial
+#400 - 1760 - commercial
+#500 - 1430 - commercial
+#1000 no need to fill , garage team
+    }
+  ],
+
+
+
+   # This is compulsory insurance , which is a must in any sceneraio
+    # In Israel you can choose if you want compulsory insurance,comprehensive insurance , Third Party Insurance
+    # if the user wants only compulsory insurance you  need to send NumeratorsKasko empty
+    # "NumeratorsKasko": [{}]
+    # in each of the fields here the only thing that needed to change is the value not the ID
+  "NumeratorsChova": [
+    {
+      "Id": "4",
+      "Value": "1000" # type of car , it it's private value will be 1000 if it's business it will be 1100
+    },
+    {
+      "Id": "3715",
+      "Value": "624135" # it's the car code you need to get this from StagentDB.Models.Car CarInformation
+    },
+    {
+      "Id": "3716",
+      "Value": "2010" #Year when the car create was created
+    },
+    {
+      "Id": "3356",
+      "Value": "0" #keep it 0
+    },
+    {
+      "Id": "3357",
+      "Value": "0" #keep it 0
+    },
+    {
+      "Id": "1858",
+      "Value": "01011990" #date of birth primary driver
+    },
+    {
+      "Id": "1863",
+      "Value": "2" #gender of driver 1 if he is male , 2 for female
+    },
+    {
+      "Id": "1861",
+      "Value": "08072016" #date when primary driver got his driving license
+    },
+    {
+      "Id": "3712",
+      "Value": "0" # how many license evictions did the driver got in the last 3 years , values are 0 until 10 (  0 is nothing)
+    },
+    {
+      "Id": "3112",
+      "Value": "99" #Amount of body claims 1-1020 3112 1 - one claim 2 - Two claims 3 - above two claims 99 - No claims 13 This question will only appear if in the general question about claims in 3 years answer yes
+    },
+    {
+      "Id": "1860",
+      "Value": "01011990" #birthdate the younget driver
+    },
+    {
+      "Id": "1862",
+      "Value": "08072016" # license driver date the youngest driver
+    },
+    {
+      "Id": "1865",
+      "Value": "1"  # amount of peopel that will drive the car , transfer 1 every time
+    },
+    {
+      "Id": "3111",
+      "Value": "1" # 1 - the youngest primary operator 2 - The youngest is not the main operator
+    },
+    {
+      "Id": "3700",
+      "Value": "1" # הסכמה לאימות מול ISO 1,
+        #always trasnfer 1
+    },
+    {
+      "Id": "3669",
+      "Value": "1" #always transfer 1
+    }
+  ]
+}
